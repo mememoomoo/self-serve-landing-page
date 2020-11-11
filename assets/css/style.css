@@ -408,7 +408,7 @@ nav {
 .learn-more-btn,
 .how-work-btn,
 .demo-btn,
-#waitlist-submit {
+.waitlist-btn {
     text-align: center;
     line-height: 21.6px;
     border-radius: 4px;
@@ -425,7 +425,7 @@ nav {
 }
 
 .demo-btn,
-#waitlist-submit {
+.waitlist-btn{
     background-color: var(--bright-green);
     color: var(--black);
     width: 170px;
@@ -435,9 +435,9 @@ nav {
 .demo-btn:hover,
 .demo-btn:focus,
 .demo-btn:active,
-#waitlist-submit:hover,
-#waitlist-submit:focus,
-#waitlist-submit:active {
+.waitlist-btn:hover,
+.waitlist-btn:focus,
+.waitlist-btn:active {
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--bright-green);
 }
