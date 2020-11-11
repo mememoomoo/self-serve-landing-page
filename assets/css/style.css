@@ -1,0 +1,578 @@
+/* TABLE OF CONTENTS
+---------------------
+#0 - CSS Variables
+    Color Palette
+    Document Fonts
+---------------------
+#1 - Universal Document Properties
+    HTML, Body
+    h1, h2
+    .underline
+    a
+    .document-container
+--------------------
+#2 - Navigation
+--------------------
+#3 - Header
+--------------------
+#4 - Request a Demo CTA
+--------------------
+#5 - Footer
+--------------------
+#6 - Buttons
+--------------------
+#7 - Testimonial
+--------------------
+
+/* #0 - Breakpoint ID */
+.breakpoint {
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 30px;
+    background: #ffffff;
+    color: #000;
+    position: fixed;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+    opacity: 0.5;
+}
+
+.breakpoint:after {
+    content: "1200+"
+}
+
+@media only screen and (max-width: 1200px) {
+    .breakpoint:after {
+        content: "1200 to 961"
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .breakpoint:after {
+        content: "960 to 769"
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .breakpoint:after {
+        content: "768 to 551"
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .breakpoint:after {
+        content: "550 to 380"
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .breakpoint:after {
+        content: "380-"
+    }
+}
+
+/* #0 - CSS Variables */
+
+:root {
+    /* Color Palette */
+    --bright-green: #20DFAC;
+    --black: #001F35;
+    --borders: rgba(0, 0, 0, 0.05);
+    --light-grey: #F3F6F9;
+    --background-grey: #F7F9FB;
+    --text: #52565C;
+    --labels: #6A7077;
+    --blue: #2687D0;
+    --yellow: #FFD595;
+    --white: #FFFFFF;
+    --lighter-dark: rgba(49, 74, 92, 0.5);
+
+    /* Document Fonts */
+    --font: 'Darker Grotesque', sans-serif;
+    --heavy: 700;
+    --regular: 400;
+}
+
+/* #1- Universal Document Properties */
+
+html,
+body {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--regular);
+    color: var(--black);
+    font-size: 24px;
+    line-height: 140%;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2 {
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: var(--heavy);
+    font-size: 50px;
+    line-height: 110%;
+}
+
+@media only screen and (max-width: 550px) {
+
+    h1,
+    h2 {
+        font-size: 35px;
+    }
+
+    html,
+    body {
+        font-size: 20px
+    }
+}
+
+.underline {
+    text-decoration: underline solid var(--borders);
+    text-decoration-thickness: 8px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none
+}
+
+.document-container {
+    width: 1200px;
+    margin: auto;
+    padding: 0
+}
+
+@media only screen and (max-width: 1200px) {
+    .document-container {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .document-container {
+        width: 768px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .document-container {
+        width: 550px
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .document-container {
+        width: 380px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .document-container {
+        width: 320px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .document-container {
+        width: 300px
+    }
+}
+
+/* #2 - Navigation */
+nav {
+    width: 100%;
+    background: var(--white);
+    height: 130px;
+}
+
+.matik-logo {
+    width: 142px;
+    height: 40px;
+    background: url("../images/header-logo-black.svg") no-repeat center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    float: left
+}
+
+.cta-form-container {
+    float: right;
+    margin-top: 45px;
+}
+
+.cta-form-container form {
+    display: flex
+}
+
+#cta-waitlist {
+    order: 1;
+    width: 280px;
+    height: 46px;
+    border: 1px solid #DFE5EC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--text);
+    margin-right: 10px;
+    padding-left: 10px
+}
+
+#waitlist-submit {
+    order: 2
+}
+
+@media only screen and (max-width: 768px) {
+    #cta-waitlist {
+        width: 200px;
+        font-size: 16px;
+    }
+}
+
+/* #3 - Header */
+#header {
+    width: 100%;
+    background-color: var(--white);
+    padding: 100px 0
+}
+
+/* #4 - Request a Demo CTA */
+
+.demo-cta-container {
+    width: 100%;
+    background: var(--black);
+    padding: 100px 0
+}
+
+.demo-cta-content-container {
+    width: 550px;
+    margin: auto;
+    text-align: center;
+}
+
+.demo-cta-h2 {
+    color: var(--white);
+}
+
+.demo-cta-content-container p {
+    font-size: 24px;
+    line-height: 140%;
+    color: var(--white);
+    opacity: 0.6;
+    padding: 8px 0 32px 0;
+}
+
+@media only screen and (max-width: 550px) {
+    .demo-cta-content-container {
+        width: 380px
+    }
+
+    .demo-cta-container {
+        padding: 50px 0
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .demo-cta-content-container {
+        width: 320px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .demo-cta-content-container {
+        width: 300px
+    }
+}
+
+/* #5 - Footer */
+
+#footer-nav {
+    width: 100%;
+    padding: 25px 0 50px 0;
+    background: var(--black);
+    margin: auto;
+    text-align: center;
+}
+
+.footer-container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.bottom-nav-item {
+    display: inline-block;
+    padding: 0 0 0 16px;
+}
+
+.bottom-nav-item a,
+.bottom-nav-item a:link,
+.bottom-nav-item a:visited,
+.bottom-nav-item:active {
+    color: var(--white);
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+.bottom-nav-item a:hover,
+.bottom-nav-item a:focus {
+    color: var(--bright-green);
+    opacity: 1;
+}
+
+.logo-nav {
+    float: left;
+    order: 1;
+}
+
+.bottom-center-nav {
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    order: 2;
+}
+
+.bottom-right-nav {
+    float: right;
+    order: 3;
+}
+
+.copyright-container p {
+    color: var(--labels);
+    opacity: 0.5;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    padding-top: 40px
+}
+
+.footer-logo {
+    background: url("../images/footer-logo\ -white.svg") no-repeat center;
+    width: 125px;
+    height: 35px;
+    opacity: 0.6;
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+    opacity: 1.0
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer-container {
+        width: 960px
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .footer-container {
+        width: 768px
+    }
+
+    .bottom-center-nav {
+        width: 400px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        width: 175px;
+        flex-wrap: wrap;
+        text-align: center
+    }
+
+    .bottom-center-nav {
+        display: none
+    }
+
+    .logo-nav {
+        float: none;
+        padding-left: 8px
+    }
+
+    .bottom-right-nav {
+        float: none
+    }
+}
+
+/* #6 - Buttons */
+
+.learn-more-btn,
+.how-work-btn,
+.demo-btn,
+#waitlist-submit {
+    text-align: center;
+    line-height: 21.6px;
+    border-radius: 4px;
+    font-size: 18px;
+    border: none;
+    margin-right: 12px
+}
+
+.learn-more-btn {
+    background-color: var(--bright-green);
+    color: var(--black);
+    width: 130px;
+    height: 44px;
+}
+
+.demo-btn,
+#waitlist-submit {
+    background-color: var(--bright-green);
+    color: var(--black);
+    width: 170px;
+    height: 44px;
+}
+
+.demo-btn:hover,
+.demo-btn:focus,
+.demo-btn:active,
+#waitlist-submit:hover,
+#waitlist-submit:focus,
+#waitlist-submit:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--bright-green);
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus,
+.learn-more-btn:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--bright-green);
+}
+
+.how-work-btn {
+    background: rgba(0, 0, 0, 0.5) url('../images/play-icon.svg') no-repeat center left;
+    color: var(--bright-green);
+    width: 170px;
+    height: 45px;
+    padding-left: 25px;
+}
+
+.how-work-btn:hover,
+.how-work-btn:focus {
+    background: var(--bright-green) url('../images/play-icon-black.svg') no-repeat center left;
+    color: var(--black);
+}
+
+/* #7 - Testimonial */
+
+.testimonial-container {
+    width: 100%;
+    background: var(--black);
+    padding: 100px 0
+}
+
+.testimonial-content-container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.testimonial-image-container {
+    background-image: url("../images/hover-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 576px;
+    height: 360px;
+    text-align: center;
+    order: 1;
+}
+
+.hover-logo {
+    padding: 160px 0
+}
+
+.testimonial-copy {
+    color: var(--white);
+    width: 624px;
+    background-color: rgba(49, 74, 92, 0.5);
+    order: 2;
+    padding: 35px 0
+}
+
+.testimonial-quote {
+    font-size: 30px;
+    line-height: 120%;
+    font-weight: var(--heavy);
+    width: 540px;
+    margin: auto
+}
+
+.testimonial-quote-attribute {
+    width: 540px;
+    margin: auto;
+    color: var(--white);
+    opacity: 0.4;
+    font-size: 18px;
+    line-height: 140%;
+    padding-top: 20px
+}
+
+@media only screen and (max-width: 1200px) {
+    .testimonial-content-container {
+        width: 960px
+    }
+
+    .testimonial-copy {
+        width: 600px
+    }
+
+    .testimonial-quote,
+    .testimonial-quote-attribute {
+        width: 95%
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .testimonial-content-container {
+        width: 768px
+    }
+
+    .testimonial-image-container {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial-content-container {
+        width: 550px;
+        flex-wrap: wrap
+    }
+
+    .testimonial-image-container {
+        order: 2;
+        height: 360px
+    }
+
+    .testimonial-copy {
+        order: 1
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .testimonial-content-container {
+        width: 380px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .testimonial-content-container {
+        width: 320px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .testimonial-content-container {
+        width: 300px
+    }
+}
