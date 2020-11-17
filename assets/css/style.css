@@ -16,11 +16,21 @@
 #3 - Header
     Header Logos
 --------------------
-#4 - Request a Demo CTA
+#4 - Automatic Data
 --------------------
-#5 - Footer
+#5 - Presentations
 --------------------
-#6 - Buttons
+#6 - Track Presentation Trends
+--------------------
+#7 - Brand Guidelines
+--------------------
+#8 - Craft Stories
+--------------------
+#9 - Request a Demo CTA
+--------------------
+#10 - Footer
+--------------------
+#11 - Buttons
 --------------------
 
 /* #0 - Breakpoint ID */
@@ -132,8 +142,9 @@ h2 {
 }
 
 .underline {
-    text-decoration: underline solid var(--borders);
-    text-decoration-thickness: 8px;
+    /* text-decoration: underline solid var(--borders);
+    text-decoration-thickness: 8px; */
+    box-shadow: inset 0 -8px var(--borders);
 }
 
 .green-underline {
@@ -423,8 +434,54 @@ nav {
         opacity: 0.5;
     }
 
+/* #4 Automatic Data */
+#automatic-data {
+    width: 100%;
+    background-color: var(--white);
+}
 
-/* #4 - Request a Demo CTA */
+.automatic-data-container {
+    width: 100%;
+    display: flex;
+    padding: 75px 0;
+    justify-content: space-between;
+    align-items: center
+}
+
+.automatic-data-graphics {
+    order: 1;
+    background: url('../images/copying-pasting-graphic.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 436px;
+    width: 552px
+}
+
+.automatic-data-copy {
+    order: 2
+}
+
+.automatic-data-copy h2 {
+    width: 450px;
+    margin-bottom: 25px;
+}
+
+.automatic-data-copy p {
+    color: var(--text);
+    font-size: 18px;
+    line-height: 24px;
+    width: 450px
+}
+
+/* #5 Presentations */
+
+/* #6 - Track Presentation Trends */
+
+/* #7 - Brand Guidelines */
+
+/* #8 - Craft Stories */
+
+/* #9 - Request a Demo CTA */
 
 .demo-cta-container {
     width: 100%;
@@ -472,7 +529,7 @@ nav {
     }
 }
 
-/* #5 - Footer */
+/* #10 - Footer */
 
 #footer-nav {
     width: 100%;
@@ -583,7 +640,7 @@ nav {
     }
 }
 
-/* #6 - Buttons */
+/* #11 - Buttons */
 
 .learn-more-btn,
 .how-work-btn,
