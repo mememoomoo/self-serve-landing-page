@@ -14,14 +14,13 @@
 #2 - Navigation
 --------------------
 #3 - Header
+    Header Logos
 --------------------
 #4 - Request a Demo CTA
 --------------------
 #5 - Footer
 --------------------
 #6 - Buttons
---------------------
-#7 - Testimonial
 --------------------
 
 /* #0 - Breakpoint ID */
@@ -83,7 +82,7 @@
     --borders: rgba(0, 0, 0, 0.05);
     --light-grey: #F3F6F9;
     --background-grey: #F7F9FB;
-    --text: #52565C;
+    --text: #52606F;
     --labels: #6A7077;
     --blue: #2687D0;
     --yellow: #FFD595;
@@ -135,6 +134,10 @@ h2 {
 .underline {
     text-decoration: underline solid var(--borders);
     text-decoration-thickness: 8px;
+}
+
+.green-underline {
+    box-shadow: inset 0 -8px var(--bright-green);
 }
 
 a:link,
@@ -243,6 +246,183 @@ nav {
     background-color: var(--white);
     padding: 100px 0
 }
+
+.header-container {
+    width: 100%;
+    display: flex;
+}
+
+.header-content-container {
+    order: 1
+}
+
+.header-video-container {
+    order: 2
+}
+
+.header-video {
+    background: var(--borders);
+    width: 670px;
+    height: 442px;
+    border-radius: 16px;
+}
+
+.header-content-container {
+    height: 442px;
+    position: relative
+}
+
+.checkmark-content-container {
+    margin-top: 32px
+}
+
+.checkmark-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkmark {
+    order: 1;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    border: 1px solid #f7f9fb;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    background: url('../images/Icons/Checkmark.svg') no-repeat center
+}
+
+.header-strong {
+    order: 2;
+    font-weight: var(--heavy);
+    padding-left: 10px;
+}
+
+.header-non-strong {
+    order: 3;
+    padding-left: 4px;
+}
+
+.works-with-container {
+    bottom: 0;
+    position: absolute
+}
+
+.works-with-container p {
+    color: var(--text);
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 10px
+}
+
+.works-with-brands {
+    display: flex
+}
+
+.works-with-google {
+    order: 1;
+    margin-right: 15px;
+}
+
+.works-with-powerpoint {
+    order: 2
+}
+
+.works-with-google,
+.works-with-powerpoint {
+    width: 170px;
+    height: 52px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.works-with-google span, .works-with-powerpoint span {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 140%;
+    order: 2;
+    margin-left: 8px
+}
+
+.google-logo {
+    width: 32px;
+    height: 28px;
+    background: url('../images/Icons/google-drive-logo.svg');
+    order: 1
+}
+
+.powerpoint-logo {
+    width: 34px;
+    height: 32px;
+    background: url('../images/Icons/powerpoint-logo.svg');
+    order: 1
+}
+
+/* Header Logos */
+    #header-logos {
+        width: 100%;
+        background: var(--light-grey);
+        padding: 60px 0;
+    }
+
+    .header-logos-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .glassdoor-logo-header {
+        order: 1;
+        width: 142px;
+        height: 32px;
+        background: url('../images/Icons/glassdoor.svg');
+        opacity: 0.5;
+    }
+
+    .hover-logo-header {
+        order: 2;
+        width: 124px;
+        height: 30px;
+        background: url('../images/Icons/hoverlogo.svg');
+        opacity: 0.5;
+    }
+
+    .handshake-logo-header {
+        order: 3;
+        width: 172px;
+        height: 26px;
+        background: url('../images/Icons/handshake.svg');
+        opacity: 0.5;
+    }
+
+    .indio-logo-header {
+        order: 4;
+        width: 80px;
+        height: 24px;
+        background: url('../images/Icons/indio.svg');
+        opacity: 0.5;
+    }
+
+    .envoy-logo-header {
+        order: 5;
+        width: 106px;
+        height: 40px;
+        background: url('../images/Icons/envoy.svg');
+        opacity: 0.5;
+    }
+
+    .keeptruckin-logo-header {
+        order: 6;
+        width: 178px;
+        height: 30px;
+        background: url('../images/Icons/keeptruckin.svg');
+        opacity: 0.5;
+    }
+
 
 /* #4 - Request a Demo CTA */
 
@@ -425,7 +605,7 @@ nav {
 }
 
 .demo-btn,
-.waitlist-btn{
+.waitlist-btn {
     background-color: var(--bright-green);
     color: var(--black);
     width: 170px;
@@ -461,118 +641,4 @@ nav {
 .how-work-btn:focus {
     background: var(--bright-green) url('../images/play-icon-black.svg') no-repeat center left;
     color: var(--black);
-}
-
-/* #7 - Testimonial */
-
-.testimonial-container {
-    width: 100%;
-    background: var(--black);
-    padding: 100px 0
-}
-
-.testimonial-content-container {
-    width: 1200px;
-    margin: auto;
-    display: flex;
-}
-
-.testimonial-image-container {
-    background-image: url("../images/hover-background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 576px;
-    height: 360px;
-    text-align: center;
-    order: 1;
-}
-
-.hover-logo {
-    padding: 160px 0
-}
-
-.testimonial-copy {
-    color: var(--white);
-    width: 624px;
-    background-color: rgba(49, 74, 92, 0.5);
-    order: 2;
-    padding: 35px 0
-}
-
-.testimonial-quote {
-    font-size: 30px;
-    line-height: 120%;
-    font-weight: var(--heavy);
-    width: 540px;
-    margin: auto
-}
-
-.testimonial-quote-attribute {
-    width: 540px;
-    margin: auto;
-    color: var(--white);
-    opacity: 0.4;
-    font-size: 18px;
-    line-height: 140%;
-    padding-top: 20px
-}
-
-@media only screen and (max-width: 1200px) {
-    .testimonial-content-container {
-        width: 960px
-    }
-
-    .testimonial-copy {
-        width: 600px
-    }
-
-    .testimonial-quote,
-    .testimonial-quote-attribute {
-        width: 95%
-    }
-}
-
-@media only screen and (max-width: 960px) {
-    .testimonial-content-container {
-        width: 768px
-    }
-
-    .testimonial-image-container {
-        height: 450px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .testimonial-content-container {
-        width: 550px;
-        flex-wrap: wrap
-    }
-
-    .testimonial-image-container {
-        order: 2;
-        height: 360px
-    }
-
-    .testimonial-copy {
-        order: 1
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .testimonial-content-container {
-        width: 380px
-    }
-}
-
-@media only screen and (max-width: 380px) {
-    .testimonial-content-container {
-        width: 320px
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .testimonial-content-container {
-        width: 300px
-    }
 }
