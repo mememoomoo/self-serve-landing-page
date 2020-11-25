@@ -322,8 +322,9 @@ nav {
 
 .header-content-container {
     order: 1;
-    height: 442px;
+    padding-top: 38px;
     width: 600px;
+    height: 362px;
     position: relative
 }
 
