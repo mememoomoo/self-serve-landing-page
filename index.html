@@ -15,8 +15,6 @@
     <link rel="apple-touch-icon" href="assets/images/logo.png">
     <link rel="mask-icon" href="assets/images/logo.png" color="#001F35">
 
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -55,7 +53,8 @@
                     </div>
                 </div>
                 <div class="header-video-container">
-                    <video src="#" class="header-video"></video>
+                    <video src="assets/video/product-video-preview.mp4" muted autoplay loop class="header-video"></video>
+                    <a href="#" id="play-button" class="play-button" onclick="playVideo()"><img src="assets/images/Icons/Play.svg" alt="Play Icon"></a>
                 </div>
             </div>
         </div>
@@ -121,6 +120,21 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script>
+        const video = document.getElementsByClassName("header-video-container")[0]
+        const playButton = document.getElementById("play-button")
+
+        function playVideo() {
+            event.preventDefault()
+            video.scrollIntoView({behavior: "smooth", block: "center"})
+            video.classList.add("active")
+            video.querySelector("video").src = "assets/video/product-video.mp4"
+            video.querySelector("video").controls = "controls"
+            video.querySelector("video").muted = ""
+            playButton.classList.remove("play-button")
+            playButton.classList.add("display-none")
+        }
+    </script>
 </body>
 
 </html>

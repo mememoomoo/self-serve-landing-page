@@ -84,6 +84,55 @@
 }
 
 /* #0 - CSS Variables */
+/* WebFont Package Licensed to Matik */
+
+/* RM Neue Regular */
+@font-face {
+	font-family: RM Neue;
+	src:	url('/fonts/eot/RM Neue Regular.eot'); /* IE9 Compat Modes */
+	src:	url('/fonts/eot/RM Neue Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('/fonts/woff2/RM Neue Regular.woff2') format('woff2'), /* Super Modern Browsers */
+			url('/fonts/woff/RM Neue Regular.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* RM Neue Semibold */
+@font-face {
+	font-family: RM Neue;
+	src:	url('/fonts/eot/RM Neue Semibold.eot'); /* IE9 Compat Modes */
+	src:	url('/fonts/eot/RM Neue Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('/fonts/woff2/RM Neue Semibold.woff2') format('woff2'), /* Super Modern Browsers */
+			url('/fonts/woff/RM Neue Semibold.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* RM Neue Bold */
+@font-face {
+	font-family: RM Neue;
+	src:	url('/fonts/eot/RM Neue Bold.eot'); /* IE9 Compat Modes */
+	src:	url('/fonts/eot/RM Neue Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('/fonts/woff2/RM Neue Bold.woff2') format('woff2'), /* Super Modern Browsers */
+			url('/fonts/woff/RM Neue Bold.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* RM Neue Regular Italic */
+@font-face {
+	font-family: RM Neue;
+	src:	url('/fonts/eot/RM Neue Regular Italic.eot'); /* IE9 Compat Modes */
+	src:	url('/fonts/eot/RM Neue Regular Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('/fonts/woff2/RM Neue Regular Italic.woff2') format('woff2'), /* Super Modern Browsers */
+			url('/fonts/woff/RM Neue Regular Italic.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
 
 :root {
     /* Color Palette */
@@ -100,7 +149,7 @@
     --lighter-dark: rgba(49, 74, 92, 0.5);
 
     /* Document Fonts */
-    --font: 'Darker Grotesque', sans-serif;
+    --font: "RM Neue", sans-serif;
     --heavy: 700;
     --regular: 400;
 }
@@ -113,7 +162,7 @@ body {
     font-style: normal;
     font-weight: var(--regular);
     color: var(--black);
-    font-size: 24px;
+    font-size: 18px;
     line-height: 140%;
     width: 100%;
     height: 100%;
@@ -124,7 +173,7 @@ h2 {
     font-family: var(--font);
     font-style: normal;
     font-weight: var(--heavy);
-    font-size: 50px;
+    font-size: 40px;
     line-height: 110%;
 }
 
@@ -157,6 +206,10 @@ a:hover,
 a:focus,
 a:active {
     text-decoration: none
+}
+
+.display-none {
+    display: none;
 }
 
 .document-container {
@@ -264,23 +317,54 @@ nav {
 }
 
 .header-content-container {
-    order: 1
+    order: 1;
+    height: 442px;
+    width: 600px;
+    position: relative
 }
 
 .header-video-container {
-    order: 2
-}
-
-.header-video {
-    background: var(--borders);
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 670px;
     height: 442px;
     border-radius: 16px;
 }
 
-.header-content-container {
-    height: 442px;
-    position: relative
+.header-video {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.header-video-container .play-button {
+    position: absolute;
+    display: flex;
+    z-index: 999;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.header-video-container .play-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.header-video-container .play-button img {
+    width: 20px;
+    left: 4px;
+}
+
+.header-video-container:active {
+    transition: all 0.3s ease;
 }
 
 .checkmark-content-container {
