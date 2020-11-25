@@ -54,7 +54,7 @@
                 </div>
                 <div class="header-video-container">
                     <video src="assets/video/product-video-preview.mp4" muted autoplay loop class="header-video"></video>
-                    <a href="#" id="play-button" class="play-button" onclick="playVideo()"><img src="assets/images/Icons/Play.svg" alt="Play Icon"></a>
+                    <a href="#" id="play-button" class="play-button"><img src="assets/images/Icons/Play.svg" alt="Play Icon"></a>
                 </div>
             </div>
         </div>
@@ -191,21 +191,6 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
-    <script>
-        const video = document.getElementsByClassName("header-video-container")[0]
-        const playButton = document.getElementById("play-button")
-
-        function playVideo() {
-            event.preventDefault()
-            video.scrollIntoView({behavior: "smooth", block: "center"})
-            video.classList.add("active")
-            video.querySelector("video").src = "assets/video/product-video.mp4"
-            video.querySelector("video").controls = "controls"
-            video.querySelector("video").muted = ""
-            playButton.classList.remove("play-button")
-            playButton.classList.add("display-none")
-        }
-    </script>
 </body>
 
 </html>
