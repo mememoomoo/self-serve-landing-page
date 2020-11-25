@@ -177,6 +177,10 @@ h2 {
     line-height: 110%;
 }
 
+p {
+    color: var(--text)
+}
+
 @media only screen and (max-width: 550px) {
 
     h1,
@@ -558,12 +562,129 @@ nav {
 }
 
 /* #5 Presentations */
+#generate-presentations {
+    width: 100%;
+    background-color: var(--background-grey)
+}
+
+.generate-presentations-container {
+    width: 100%;
+    display: flex;
+    padding: 55px 0;
+    align-items: center;
+    justify-content: space-between
+}
+
+.generate-presentations-copy {
+    order: 1;
+    width: 575px;
+}
+
+.generate-presentations-copy h2{
+    padding-bottom: 20px
+}
+
+.generate-presentations-graphics {
+    order: 2;
+    background: url('../images/presentations-graphic.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 486px;
+    height: 383px;
+}
 
 /* #6 - Track Presentation Trends */
+#presentation-trends {
+    width: 100%;
+    background-color: var(--white)
+}
+
+.trends-container {
+    width: 100%;
+    display: flex;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: space-between
+}
+
+.trends-graphics {
+    order: 1;
+    background: url("../images/trends-graphic.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 570px;
+    height: 362px
+}
+
+.trends-copy {
+    order: 2;
+    width: 575px
+}
+
+.trends-copy h2 {
+    padding-bottom: 20px
+}
 
 /* #7 - Brand Guidelines */
+#brand-guidelines {
+    width: 100%;
+    background-color: var(--background-grey)
+}
+
+.guidelines-container {
+    width: 100%;
+    display: flex;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: space-between
+}
+
+.guidelines-copy {
+    order: 1;
+    width: 500px;
+    height: 350px;
+    position: relative
+}
+
+.guidelines-copy h2 {
+    padding-bottom: 20px
+}
+
+.guidelines-graphics {
+    order: 2
+}
 
 /* #8 - Craft Stories */
+#craft-stories {
+    width: 100%;
+    background-color: var(--white)
+}
+
+.stories-container {
+    width: 100%;
+    display: flex;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: space-between
+}
+
+.stories-graphics {
+    order: 1;
+    background: url("../images/craft-stories-graphic.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 700px;
+    height: 250px
+}
+
+.stories-copy {
+    order: 2;
+    width: 600px
+}
+
+.stories-copy h2 {
+    padding-bottom: 20px
+}
 
 /* #9 - Request a Demo CTA */
 
