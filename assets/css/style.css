@@ -23,6 +23,7 @@
 #6 - Track Presentation Trends
 --------------------
 #7 - Brand Guidelines
+    Slideshow
 --------------------
 #8 - Craft Stories
 --------------------
@@ -644,6 +645,7 @@ nav {
     order: 1;
     width: 500px;
     height: 350px;
+    margin-top: 75px;
     position: relative
 }
 
@@ -652,7 +654,141 @@ nav {
 }
 
 .guidelines-graphics {
-    order: 2
+    order: 2;
+    width: 475px;
+    height: 300px;
+}
+
+/* Slide Show */
+
+.slides-container {
+    position: relative;
+}
+
+#slide-one,
+#slide-two,
+#slide-three {
+    width: 430px;
+    height: 245px;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
+    border-radius: 4px;
+}
+
+#slide-one {
+    position: absolute;
+    z-index: 103;
+    top: 40px;
+    left: 40px
+}
+
+#slide-two {
+    position: absolute;
+    z-index: 102;
+    top: 20px;
+    left: 20px
+}
+
+#slide-three {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0
+}
+
+.acme-corp-screen {
+    background: url("../images/acme-corp-screen.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.your-team-screen {
+    background: url("../images/your-team-screen.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.tickets-screen {
+    background: url("../images/tickets-screen.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px
+}
+
+#button-one,
+#button-two,
+#button-three {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer
+}
+
+#button-one {
+    order: 1;
+    margin: 10px
+}
+
+#button-two {
+    order: 2;
+    margin: 10px
+}
+
+#button-three {
+    order: 3;
+    margin: 10px
+}
+
+.inactive-blue {
+    background-color: #2687D0;
+    opacity: 0.2
+}
+
+.active-blue {
+    background-color: #2687D0;
+}
+
+.inactive-purple {
+    background-color: #312170;
+    opacity: 0.2
+}
+
+.active-purple {
+    background-color: #312170;
+}
+
+.inactive-green {
+    background-color: #00BD4C;
+    opacity: 0.2
+}
+
+.active-green {
+    background-color: #00BD4C;
+}
+
+.inactive-blue:hover,
+.inactive-purple:hover,
+.inactive-green:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+.active-blue:hover,
+.active-purple:hover,
+.active-green:hover {
+    opacity: 0.2;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
 }
 
 /* #8 - Craft Stories */
