@@ -48,6 +48,7 @@
     font-weight: bold;
     z-index: 2;
     opacity: 0.5;
+    z-index: 200001
 }
 
 .breakpoint:after {
@@ -195,6 +196,18 @@ p {
     }
 }
 
+@media only screen and (max-width: 380px) {
+    h1,
+    h2 {
+        font-size: 32px;
+    }
+
+    html,
+    body {
+        font-size: 18px
+    }
+}
+
 .underline {
     /* text-decoration: underline solid var(--borders);
     text-decoration-thickness: 8px; */
@@ -213,14 +226,10 @@ a:active {
     text-decoration: none
 }
 
-.display-none {
-    display: none;
-}
-
 .document-container {
     width: 1200px;
     margin: auto;
-    padding: 0
+    padding: 0;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -264,6 +273,8 @@ nav {
     width: 100%;
     background: var(--white);
     height: 130px;
+    position: fixed;
+    z-index: 200000;
 }
 
 .matik-logo {
@@ -309,11 +320,57 @@ nav {
     }
 }
 
+@media only screen and (max-width: 550px) {
+    nav {
+        height: 120px
+    }
+
+    .matik-logo {
+        order: 1;
+        padding: 20px 0 0 0;
+        float: none;
+    }
+
+    .cta-form-container {
+        order: 2;
+        margin: 0
+    }
+
+    .navigation-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .cta-form-container form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    nav {
+        height: 150px
+    }
+
+    #cta-waitlist {
+        order: 1;
+        width: 100%;
+    }
+
+    .waitlist-btn {
+        order: 2;
+        margin-top: 10px
+    }
+}
+
 /* #3 - Header */
 #header {
     width: 100%;
     background-color: var(--white);
-    padding: 100px 0
+    padding: 150px 0 100px 0
 }
 
 .header-container {
@@ -326,7 +383,7 @@ nav {
     padding-top: 38px;
     width: 600px;
     height: 362px;
-    position: relative
+    position: relative;
 }
 
 .header-video-container {
@@ -463,6 +520,101 @@ nav {
     order: 1
 }
 
+@media only screen and (max-width: 1200px) {
+    .header-content-container {
+        padding-top: 50px;
+        width: 680px;
+        height: 350px
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #header {
+        padding: 150px 0 50px 0
+    }
+    
+    .header-container {
+        display: inline;
+    }
+
+    .header-content-container {
+        width: 650px;
+        margin: auto;
+        height: 320px;
+        padding-top: 0;
+        padding-bottom: 20px
+    }
+
+    .header-video-container {
+        margin: auto
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-video-container {
+        width: 550px;
+        height: 362px;
+    }
+    
+    .header-content-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .header-content-container {
+        width: 100%;
+        height: 400px
+    }
+
+    .checkmark-content {
+        font-size: 16px;
+        line-height: 110%;
+        padding-bottom: 10px;
+        display: flex;
+    }
+
+    .header-strong {
+        width: 380px
+    }
+
+    .header-non-strong {
+        width: 380px
+    }
+
+    .header-video-container {
+        width: 380px;
+        height: 250px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .header-content-container {
+        height: 430px;
+    }
+
+    .works-with-container {
+        width: 100%;
+    }
+
+    .works-with-google span,
+    .works-with-powerpoint span {
+        font-size: 14px
+    }
+
+    .header-video-container {
+        width: 320px;
+        height: 210px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header-video-container {
+        width: 300px;
+        height: 196px
+    }
+}
+
 /* Header Logos */
     #header-logos {
         width: 100%;
@@ -523,6 +675,113 @@ nav {
         background: url('../images/Icons/keeptruckin.svg');
         opacity: 0.5;
     }
+    
+    @media only screen and (max-width: 960px) {
+        .glassdoor-logo-header,
+        .hover-logo-header,
+        .handshake-logo-header,
+        .indio-logo-header,
+        .envoy-logo-header,
+        .keeptruckin-logo-header {
+            background-size: contain;
+            background-repeat: no-repeat
+        }
+        
+        .glassdoor-logo-header {
+            width: calc(142px * 0.8);
+            height: calc(32px * 0.8)
+        }
+
+        .hover-logo-header {
+            width: calc(124px * 0.8);
+            height: calc(30px * 0.8)
+        }
+
+        .handshake-logo-header {
+            width: calc(172px * 0.8);
+            height: calc(26px * 0.8);
+        }
+
+        .indio-logo-header {
+            width: calc(80px * 0.8);
+            height: calc(24px * 0.8);
+        }
+
+        .envoy-logo-header {
+            width: calc(106px * 0.8);
+            height: calc(40px * 0.8);
+        }
+
+        .keeptruckin-logo-header {
+            width: calc(178px * 0.8);
+            height: calc(30px * 0.8);
+        }
+
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .header-logos-container {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+        }
+
+        .glassdoor-logo-header,
+        .hover-logo-header,
+        .handshake-logo-header,
+        .indio-logo-header,
+        .envoy-logo-header,
+        .keeptruckin-logo-header {
+            padding: 0 10px 20px 10px
+        }
+
+        .glassdoor-logo-header {
+            width: 142px;
+            height: 32px;
+        }
+
+        .hover-logo-header {
+            width: 124px;
+            height: 30px
+        }
+
+        .handshake-logo-header {
+            width: 172px;
+            height: 26px
+        }
+
+        .indio-logo-header {
+            width: 80px;
+            height: 24px
+        }
+
+        .envoy-logo-header {
+            width: 106px;
+            height: 40px;
+        }
+
+        .keeptruckin-logo-header {
+            width: 178px;
+            height: 30px;
+        }
+    }
+    
+    @media only screen and (max-width: 380px) {
+        .header-logos-container {
+            width: 280px
+        }
+
+        .glassdoor-logo-header,
+        .hover-logo-header,
+        .handshake-logo-header,
+        .indio-logo-header,
+        .envoy-logo-header,
+        .keeptruckin-logo-header {
+            display: block
+        }
+    }
 
 /* #4 Automatic Data */
 #automatic-data {
@@ -535,7 +794,7 @@ nav {
     display: flex;
     padding: 75px 0;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
 }
 
 .automatic-data-graphics {
@@ -543,12 +802,13 @@ nav {
     background: url('../images/copying-pasting-graphic.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     height: 436px;
-    width: 552px
+    width: 552px;
 }
 
 .automatic-data-copy {
-    order: 2
+    order: 2;
 }
 
 .automatic-data-copy h2 {
@@ -560,13 +820,55 @@ nav {
     color: var(--text);
     font-size: 18px;
     line-height: 24px;
-    width: 450px
+    width: 450px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .automatic-data-graphics {
+        width: 400px;
+        margin-right: 10px
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .automatic-data-container {
+        padding: 0;
+    }
+
+    .automatic-data-copy h2 {
+        width: 425px;
+    }
+    
+    .automatic-data-copy p {
+        width: 425px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .automatic-data-container {
+        flex-wrap: wrap-reverse;
+        padding: 50px 0;
+        justify-content: center;
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .automatic-data-copy h2,
+    .automatic-data-copy p {
+        width: 100%
+    }
+
+    .automatic-data-graphics {
+        height: 280px;
+        width: 100%
+    }
 }
 
 /* #5 Presentations */
 #generate-presentations {
     width: 100%;
-    background-color: var(--background-grey)
+    background-color: var(--background-grey);
 }
 
 .generate-presentations-container {
@@ -591,14 +893,46 @@ nav {
     background: url('../images/presentations-graphic.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     width: 486px;
     height: 383px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .generate-presentations-container {
+        flex-wrap: wrap;
+        padding: 50px 0;
+        justify-content: center;
+        width: 100%
+    }
+
+    .generate-presentations-copy {
+        width: 100%;
+        margin-bottom: 20px
+    }
+
+    .generate-presentations-graphics {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .generate-presentations-graphics {
+        height: 300px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .generate-presentations-graphics {
+        height: 250px
+    }
 }
 
 /* #6 - Track Presentation Trends */
 #presentation-trends {
     width: 100%;
-    background-color: var(--white)
+    background-color: var(--white);
 }
 
 .trends-container {
@@ -614,6 +948,7 @@ nav {
     background: url("../images/trends-graphic.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     width: 570px;
     height: 362px
 }
@@ -627,10 +962,45 @@ nav {
     padding-bottom: 20px
 }
 
+@media only screen and (max-width: 1200px) {
+    .trends-copy {
+        padding-left: 20px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .trends-container {
+        flex-wrap: wrap-reverse;
+        padding: 50px 0;
+        justify-content: center;
+        width: 100%
+    }
+
+    .trends-graphics {
+        margin-top: 20px;
+        width: 100%;
+        height: 320px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .trends-graphics {
+        margin: 0
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .trends-graphics {
+        height: 200px;
+        padding-top: 20px
+    }
+}
+
 /* #7 - Brand Guidelines */
 #brand-guidelines {
     width: 100%;
-    background-color: var(--background-grey)
+    background-color: var(--background-grey);
 }
 
 .guidelines-container {
@@ -791,10 +1161,55 @@ nav {
     transition: all 0.3s ease;
 }
 
+@media only screen and (max-width: 960px) {
+    .guidelines-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .guidelines-graphics {
+        margin-top: 40px
+    }
+
+    .guidelines-copy {
+        padding: 0;
+        margin: 0;
+        height: 320px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #slide-one,
+    #slide-two,
+    #slide-three {
+        left: 0;
+        width: 100%;
+        background-size: contain;
+    }
+
+    .slides-container {
+        width: 100%
+    }
+
+    .guidelines-container {
+        padding: 50px 0 75px 0
+    }
+
+    .button-container {
+        margin-top: 270px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .guidelines-copy {
+        height: 340px;
+    }
+}
+
 /* #8 - Craft Stories */
 #craft-stories {
     width: 100%;
-    background-color: var(--white)
+    background-color: var(--white);
 }
 
 .stories-container {
@@ -810,17 +1225,34 @@ nav {
     background: url("../images/craft-stories-graphic.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 700px;
-    height: 250px
+    background-size: contain;
+    width: 600px;
+    height: 300px;
+    border-radius: 8px
 }
 
 .stories-copy {
     order: 2;
-    width: 600px
+    width: 600px;
+    margin-left: 20px
 }
 
 .stories-copy h2 {
     padding-bottom: 20px
+}
+
+@media only screen and (max-width: 768px) {
+    .stories-container {
+        flex-wrap: wrap-reverse;
+        padding: 50px 0;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .stories-graphics {
+        height: 200px
+    }
 }
 
 /* #9 - Request a Demo CTA */
@@ -1040,4 +1472,9 @@ nav {
 .how-work-btn:focus {
     background: var(--bright-green) url('../images/play-icon-black.svg') no-repeat center left;
     color: var(--black);
+}
+
+/* DISPLAY NONE */
+.display-none {
+    display: none;
 }
